@@ -4,7 +4,7 @@ const expenses = document.querySelectorAll(
 
 async function fetchData() {
   try {
-    const response = await fetch("/data.json");
+    const response = await fetch("data.json");
     const data = await response.json();
     let maxAmount = 0;
     let maxExpense;
@@ -25,7 +25,7 @@ async function fetchData() {
       maxExpense.style.backgroundColor = "#76b5bc";
     }
   } catch (error) {
-    console.error("Error fetching:", error);
+    console.log("Error fetching:", error);
   }
 }
 
